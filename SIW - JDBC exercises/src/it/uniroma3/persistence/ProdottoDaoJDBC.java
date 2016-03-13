@@ -17,7 +17,7 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 	public static void save(Prodotto prodotto) throws PersistenceException{
 		Connection connection = DBOperations.getConnection();;
 		String query = "INSERT into prodotto(id, nome, descrizione, prezzo) values (?,?,?,?)";
-		PreparedStatement statement;
+		PreparedStatement statement = null;
 		try {
 			statement = connection.prepareStatement(query);
 			statement.setLong(1, prodotto.getId());
@@ -28,13 +28,20 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 			connection.close();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
+		} finally{
+			try {
+			connection.close(); 
+			statement.close();
+			} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+			}
 		}
 	}
 	
 	public static void delete(Prodotto prodotto){
 		Connection connection = DBOperations.getConnection();;
 		String query = "DELETE from prodotto where id = ?";
-		PreparedStatement statement;
+		PreparedStatement statement = null;
 		try {
 			statement = connection.prepareStatement(query);
 			statement.setLong(1, prodotto.getId());
@@ -42,13 +49,20 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 			connection.close();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
+		} finally{
+			try {
+			connection.close(); 
+			statement.close();
+			} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+			}
 		}
 	}
 	
 	public static void update(Prodotto prodotto){
 		Connection connection = DBOperations.getConnection();;
 		String query = "UPDATE prodotto SET nome=?, descrizione=?, prezzo=? where id=?";
-		PreparedStatement statement;
+		PreparedStatement statement = null;
 		try {
 			statement = connection.prepareStatement(query);
 			statement.setString(1, prodotto.getNome());
@@ -59,33 +73,50 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 			connection.close();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
+		} finally{
+			try {
+			connection.close(); 
+			statement.close();
+			} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+			}
 		}
 	}
 	
 	public static Prodotto findByPrimaryKey(Long id){
 		Connection connection = DBOperations.getConnection();
 		String query = "SELECT id,nome,descrizione,prezzo FROM prodotto WHERE id=?";
-		PreparedStatement statement;
+		PreparedStatement statement = null;
+		ResultSet result = null;
 		try{
 			statement = connection.prepareStatement(query);
 			statement.setLong(1, id);
-			ResultSet result = statement.executeQuery();
+			result = statement.executeQuery();
 			result.next();
 			Prodotto p = new Prodotto(result.getLong("id"),result.getString("nome"),result.getString("descrizione"),result.getDouble("prezzo"));
 			connection.close();
 			return p;
 		} catch (SQLException e){
 			throw new PersistenceException(e.getMessage());
+		} finally{
+			try {
+			connection.close(); 
+			statement.close();
+			result.close();
+			} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+			}
 		}
 	}
 	
  	public static List<Prodotto> findAll(){
  		Connection connection = DBOperations.getConnection();
 		String query = "SELECT id,nome,descrizione,prezzo FROM prodotto";
-		PreparedStatement statement;
+		PreparedStatement statement = null;
+		ResultSet result = null;
 		try{
 			statement = connection.prepareStatement(query);
-			ResultSet result = statement.executeQuery();
+			result = statement.executeQuery();
 			LinkedList<Prodotto> lp = new LinkedList<>(); 
 			while(result.next()){
 			Prodotto p = new Prodotto(result.getLong("id"),result.getString("nome"),result.getString("descrizione"),result.getDouble("prezzo"));
@@ -95,6 +126,14 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 			return lp;
 		} catch (SQLException e){
 			throw new PersistenceException(e.getMessage());
+		} finally{
+			try {
+			connection.close(); 
+			statement.close();
+			result.close();
+			} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+			}
 		}
  	}
 }
