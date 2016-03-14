@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		Prodotto p = new Prodotto(0001,"gatta", "animale", 150);
 		Prodotto p2 = new Prodotto(0002,"cana", "animale", 150);
-		System.out.println(ProdottoDaoJDBC.findAll().toString());
+		ProdottoDaoJDBC prodotti = new ProdottoDaoJDBC();
+		System.out.println(prodotti.findByPrimaryKey((long)0001).toString());
 	}
-
 }

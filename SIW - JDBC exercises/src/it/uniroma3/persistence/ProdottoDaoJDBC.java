@@ -12,9 +12,14 @@ import it.uniroma3.persistence.ProdottoDAO;
 import it.uniroma3.persistence.DBOperations;
 
 public class ProdottoDaoJDBC implements ProdottoDAO {
-
-
-	public static void save(Prodotto prodotto) throws PersistenceException{
+	
+	private DBOperations DBO;
+	
+	public ProdottoDaoJDBC(){
+		this.DBO = new DBOperations();
+	}
+	
+	public void save(Prodotto prodotto) throws PersistenceException{
 		Connection connection = DBOperations.getConnection();;
 		String query = "INSERT into prodotto(id, nome, descrizione, prezzo) values (?,?,?,?)";
 		PreparedStatement statement = null;
@@ -38,7 +43,7 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 		}
 	}
 	
-	public static void delete(Prodotto prodotto){
+	public void delete(Prodotto prodotto){
 		Connection connection = DBOperations.getConnection();;
 		String query = "DELETE from prodotto where id = ?";
 		PreparedStatement statement = null;
@@ -59,7 +64,7 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 		}
 	}
 	
-	public static void update(Prodotto prodotto){
+	public void update(Prodotto prodotto){
 		Connection connection = DBOperations.getConnection();;
 		String query = "UPDATE prodotto SET nome=?, descrizione=?, prezzo=? where id=?";
 		PreparedStatement statement = null;
@@ -83,7 +88,7 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 		}
 	}
 	
-	public static Prodotto findByPrimaryKey(Long id){
+	public Prodotto findByPrimaryKey(Long id){
 		Connection connection = DBOperations.getConnection();
 		String query = "SELECT id,nome,descrizione,prezzo FROM prodotto WHERE id=?";
 		PreparedStatement statement = null;
@@ -109,7 +114,7 @@ public class ProdottoDaoJDBC implements ProdottoDAO {
 		}
 	}
 	
- 	public static List<Prodotto> findAll(){
+ 	public List<Prodotto> findAll(){
  		Connection connection = DBOperations.getConnection();
 		String query = "SELECT id,nome,descrizione,prezzo FROM prodotto";
 		PreparedStatement statement = null;

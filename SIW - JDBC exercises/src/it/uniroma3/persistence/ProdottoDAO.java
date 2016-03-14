@@ -5,11 +5,9 @@ import it.uniroma3.model.Prodotto;
 import java.util.List; 
 
 	public interface ProdottoDAO {	
-		public static void save(Prodotto prodotto){};
-		public static void delete(Prodotto prodotto){};
-		public static void update(Prodotto prodotto){};
-		static Prodotto findByPrimaryKey(Long id){
-			return null;};
-	 	static List<Prodotto> findAll(){
-			return null;};
+		public void save(Prodotto prodotto);
+		public void delete(Prodotto prodotto);
+		public void update(Prodotto prodotto);
+		Prodotto findByPrimaryKey(Long id);
+	 	List<Prodotto> findAll();
 	}
