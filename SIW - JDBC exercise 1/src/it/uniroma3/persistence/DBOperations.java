@@ -2,18 +2,26 @@ package it.uniroma3.persistence;
 
 import java.sql.*;
 
+import it.uniroma3.crypt.AesCrypt;
+
 public class DBOperations {
+	private AesCrypt crypt = new AesCrypt();
+	private String dbURI = "jdbc:postgresql:postgres";
+	private String username = "postgres";
+	private String password = this.crypt.getValue1();
+	
+
+	public DBOperations() {
+		super();
+	}
 
 
 
-	public static Connection getConnection() throws PersistenceException{
-		String dbURI = "jdbc:postgresql:postgres";
-		String username = "postgres";
-		String password = "k";
+	public Connection getConnection() throws PersistenceException{
 		Connection connection = null;
 		try {
 			Class.forName("org.postgresql.Driver");
-			connection = DriverManager.getConnection(dbURI, username, password);
+			connection = DriverManager.getConnection(this.dbURI, this.username, this.password);
 		} catch (ClassNotFoundException e) {
 			throw new PersistenceException(e.getMessage());
 		} catch (SQLException e){
