@@ -46,6 +46,6 @@ public class Prodotto {
 	}
 	
 	public String toString(){
-		return this.id + " - " + this.nome + " - " + this.descrizione + " - " + this.prezzo + "\n";
+		return this.id + " - " + this.nome + " - " + this.descrizione + " - " + this.prezzo;
 	}
 }
