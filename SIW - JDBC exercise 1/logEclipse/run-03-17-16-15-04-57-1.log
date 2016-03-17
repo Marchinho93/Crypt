@@ -1,0 +1,24 @@
+DEBUG[
+2016-03-17 15:04:56,009 i.u.p.DBOperations [main] 	> GettingDbConnection = org.postgresql.jdbc.PgConnection@795cd85e
+]
+DEBUG[
+2016-03-17 15:04:56,011 i.u.p.ProdottoDaoJDBC [main] 	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:56,011 i.u.p.ProdottoDaoJDBC [main] 	> DbOperation (Query = DELETE from prodotto where id = 2)
+]
+DEBUG[
+2016-03-17 15:04:56,012 i.u.p.ProdottoDaoJDBC [main] 	> Deleted product = 2 - cane - animale - 150.0
+]
+DEBUG[
+2016-03-17 15:04:56,012 i.u.p.ProdottoDaoJDBC [main] 	> ClosingConnection = org.postgresql.jdbc.PgConnection@795cd85e
+]
+DEBUG[
+2016-03-17 15:04:56,012 i.u.p.ProdottoDaoJDBC [main] 	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:56,013 i.u.p.ProdottoDaoJDBC [main] 	> FlushingStatement = DELETE from prodotto where id = 2
+]
+DEBUG[
+2016-03-17 15:04:56,013 i.u.p.ProdottoDaoJDBC [main] 	> Flushed.
+]

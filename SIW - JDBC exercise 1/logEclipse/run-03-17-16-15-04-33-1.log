@@ -1,0 +1,289 @@
+DEBUG[
+2016-03-17 15:04:33,479 i.u.c.AesCrypt [main]
+> CreatingCrypterInstance
+]
+DEBUG[
+2016-03-17 15:04:33,484 i.u.c.AesCrypt [main]
+	> ReadCryptConfig = java.io.BufferedReader@3ecd23d9
+]
+DEBUG[
+2016-03-17 15:04:33,630 i.u.c.AesCrypt [main]
+	> CreateCryptClass = it.uniroma3.crypt.AesCrypt@4278a03f
+]
+DEBUG[
+2016-03-17 15:04:33,645 i.u.c.AesCrypt [main]
+	> Decrypt = javax.crypto.Cipher@5276e6b0
+]
+DEBUG[
+2016-03-17 15:04:33,646 i.u.p.ProdottoDaoJDBC [main]
+-> Save
+]
+DEBUG[
+2016-03-17 15:04:33,714 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@c33b74f
+]
+DEBUG[
+2016-03-17 15:04:33,715 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:33,721 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = INSERT into prodotto(id, nome, descrizione, prezzo) values (1,'gatto','animale',150.0))
+]
+DEBUG[
+2016-03-17 15:04:33,723 i.u.p.ProdottoDaoJDBC [main]
+	> Inserted product = 1 - gatto - animale - 150.0
+]
+DEBUG[
+2016-03-17 15:04:33,723 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@c33b74f
+]
+DEBUG[
+2016-03-17 15:04:33,724 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:33,724 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = INSERT into prodotto(id, nome, descrizione, prezzo) values (1,'gatto','animale',150.0)
+]
+DEBUG[
+2016-03-17 15:04:33,724 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 15:04:33,724 i.u.p.ProdottoDaoJDBC [main]
+-> Save
+]
+DEBUG[
+2016-03-17 15:04:33,758 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@6eda5c9
+]
+DEBUG[
+2016-03-17 15:04:33,758 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:33,758 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = INSERT into prodotto(id, nome, descrizione, prezzo) values (2,'cane','animale',150.0))
+]
+DEBUG[
+2016-03-17 15:04:33,759 i.u.p.ProdottoDaoJDBC [main]
+	> Inserted product = 2 - cane - animale - 150.0
+]
+DEBUG[
+2016-03-17 15:04:33,759 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@6eda5c9
+]
+DEBUG[
+2016-03-17 15:04:33,759 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:33,759 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = INSERT into prodotto(id, nome, descrizione, prezzo) values (2,'cane','animale',150.0)
+]
+DEBUG[
+2016-03-17 15:04:33,759 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 15:04:33,760 i.u.p.ProdottoDaoJDBC [main]
+
+-> Update
+]
+DEBUG[
+2016-03-17 15:04:33,792 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@55b7a4e0
+]
+DEBUG[
+2016-03-17 15:04:33,793 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:33,793 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = UPDATE prodotto SET nome='leone', descrizione='animale', prezzo=150.0 where id=1)
+]
+DEBUG[
+2016-03-17 15:04:33,794 i.u.p.ProdottoDaoJDBC [main]
+	> Updated product = 1 - leone - animale - 150.0
+]
+DEBUG[
+2016-03-17 15:04:33,794 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@55b7a4e0
+]
+DEBUG[
+2016-03-17 15:04:33,794 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:33,794 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = UPDATE prodotto SET nome='leone', descrizione='animale', prezzo=150.0 where id=1
+]
+DEBUG[
+2016-03-17 15:04:33,794 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 15:04:33,794 i.u.p.ProdottoDaoJDBC [main]
+-> FindByPrimaryKey
+]
+DEBUG[
+2016-03-17 15:04:33,828 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@5f058f00
+]
+DEBUG[
+2016-03-17 15:04:33,829 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:33,829 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = SELECT id,nome,descrizione,prezzo FROM prodotto WHERE id=1)
+]
+DEBUG[
+2016-03-17 15:04:33,836 i.u.p.ProdottoDaoJDBC [main]
+	> GotResult = 1 leone animale 150.0
+]
+DEBUG[
+2016-03-17 15:04:33,836 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@5f058f00
+]
+DEBUG[
+2016-03-17 15:04:33,836 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:33,836 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = SELECT id,nome,descrizione,prezzo FROM prodotto WHERE id=1
+]
+DEBUG[
+2016-03-17 15:04:33,836 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 15:04:33,836 i.u.p.ProdottoDaoJDBC [main]
+	> CleaningResult = org.postgresql.jdbc.PgResultSet@40ef3420
+]
+DEBUG[
+2016-03-17 15:04:33,836 i.u.p.ProdottoDaoJDBC [main]
+	> Cleaned.
+]
+DEBUG[
+2016-03-17 15:04:33,837 i.u.p.ProdottoDaoJDBC [main]
+-> FindAll
+]
+DEBUG[
+2016-03-17 15:04:33,870 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@498d318c
+]
+DEBUG[
+2016-03-17 15:04:33,870 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:33,870 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = SELECT id,nome,descrizione,prezzo FROM prodotto)
+]
+DEBUG[
+2016-03-17 15:04:33,871 i.u.p.ProdottoDaoJDBC [main]
+	> GotResult = 2 cane      animale   150.0
+]
+DEBUG[
+2016-03-17 15:04:33,871 i.u.p.ProdottoDaoJDBC [main]
+	> GotResult = 1 leone     animale   150.0
+]
+DEBUG[
+2016-03-17 15:04:33,871 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@498d318c
+]
+DEBUG[
+2016-03-17 15:04:33,871 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:33,872 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = SELECT id,nome,descrizione,prezzo FROM prodotto
+]
+DEBUG[
+2016-03-17 15:04:33,872 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 15:04:33,872 i.u.p.ProdottoDaoJDBC [main]
+	> CleaningResult = org.postgresql.jdbc.PgResultSet@6e171cd7
+]
+DEBUG[
+2016-03-17 15:04:33,872 i.u.p.ProdottoDaoJDBC [main]
+	> Cleaned.
+]
+DEBUG[
+2016-03-17 15:04:33,872 i.u.p.ProdottoDaoJDBC [main]
+-> Delete
+]
+DEBUG[
+2016-03-17 15:04:33,905 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@402bba4f
+]
+DEBUG[
+2016-03-17 15:04:33,905 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:33,905 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = DELETE from prodotto where id = 1)
+]
+DEBUG[
+2016-03-17 15:04:33,907 i.u.p.ProdottoDaoJDBC [main]
+	> Deleted product = 1 - gatto - animale - 150.0
+]
+DEBUG[
+2016-03-17 15:04:33,907 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@402bba4f
+]
+DEBUG[
+2016-03-17 15:04:33,908 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:33,908 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = DELETE from prodotto where id = 1
+]
+DEBUG[
+2016-03-17 15:04:33,908 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 15:04:33,908 i.u.p.ProdottoDaoJDBC [main]
+-> Delete
+]
+DEBUG[
+2016-03-17 15:04:33,941 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@795cd85e
+]
+DEBUG[
+2016-03-17 15:04:33,941 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:04:33,941 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = DELETE from prodotto where id = 2)
+]
+DEBUG[
+2016-03-17 15:04:33,943 i.u.p.ProdottoDaoJDBC [main]
+	> Deleted product = 2 - cane - animale - 150.0
+]
+DEBUG[
+2016-03-17 15:04:33,943 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@795cd85e
+]
+DEBUG[
+2016-03-17 15:04:33,943 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:04:33,943 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = DELETE from prodotto where id = 2
+]
+DEBUG[
+2016-03-17 15:04:33,943 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]

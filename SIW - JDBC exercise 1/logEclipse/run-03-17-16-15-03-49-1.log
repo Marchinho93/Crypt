@@ -1,0 +1,53 @@
+DEBUG[
+2016-03-17 15:03:49,687 i.u.c.AesCrypt [main]
+> CreatingCrypterInstance
+]
+DEBUG[
+2016-03-17 15:03:49,693 i.u.c.AesCrypt [main]
+	> ReadCryptConfig = java.io.BufferedReader@3ecd23d9
+]
+DEBUG[
+2016-03-17 15:03:49,837 i.u.c.AesCrypt [main]
+	> CreateCryptClass = it.uniroma3.crypt.AesCrypt@4278a03f
+]
+DEBUG[
+2016-03-17 15:03:49,855 i.u.c.AesCrypt [main]
+	> Decrypt = javax.crypto.Cipher@5276e6b0
+]
+DEBUG[
+2016-03-17 15:03:49,855 i.u.p.ProdottoDaoJDBC [main]
+-> Save
+]
+DEBUG[
+2016-03-17 15:03:49,926 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@c33b74f
+]
+DEBUG[
+2016-03-17 15:03:49,926 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 15:03:49,932 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = INSERT into prodotto(id, nome, descrizione, prezzo) values (1,'gatto','animale',150.0))
+]
+ERROR[
+2016-03-17 15:03:49,937 i.u.p.ProdottoDaoJDBC [main]
+org.postgresql.util.PSQLException: ERRORE: un valore chiave duplicato viola il vincolo univoco "prodotto_pkey"
+  Dettaglio: La chiave (id)=(1) esiste già.
+]
+DEBUG[
+2016-03-17 15:03:49,937 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@c33b74f
+]
+DEBUG[
+2016-03-17 15:03:49,938 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 15:03:49,938 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = INSERT into prodotto(id, nome, descrizione, prezzo) values (1,'gatto','animale',150.0)
+]
+DEBUG[
+2016-03-17 15:03:49,938 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]

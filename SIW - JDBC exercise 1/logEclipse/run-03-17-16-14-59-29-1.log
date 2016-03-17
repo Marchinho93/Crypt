@@ -1,0 +1,97 @@
+DEBUG[
+2016-03-17 14:59:28,124 i.u.c.AesCrypt [main]
+> CreatingCrypterInstance
+]
+DEBUG[
+2016-03-17 14:59:28,129 i.u.c.AesCrypt [main]
+	> ReadCryptConfig = java.io.BufferedReader@3ecd23d9
+]
+DEBUG[
+2016-03-17 14:59:28,288 i.u.c.AesCrypt [main]
+	> CreateCryptClass = it.uniroma3.crypt.AesCrypt@4278a03f
+]
+DEBUG[
+2016-03-17 14:59:28,304 i.u.c.AesCrypt [main]
+	> Decrypt = javax.crypto.Cipher@5276e6b0
+]
+DEBUG[
+2016-03-17 14:59:28,304 i.u.p.ProdottoDaoJDBC [main]
+
+-> Update
+]
+DEBUG[
+2016-03-17 14:59:28,374 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@c33b74f
+]
+DEBUG[
+2016-03-17 14:59:28,374 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 14:59:28,380 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = UPDATE prodotto SET nome='gatto', descrizione='animale', prezzo=150.0 where id=1)
+]
+DEBUG[
+2016-03-17 14:59:28,383 i.u.p.ProdottoDaoJDBC [main]
+	> Updated product = 1 - gatto - animale - 150.0
+]
+DEBUG[
+2016-03-17 14:59:28,383 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@c33b74f
+]
+DEBUG[
+2016-03-17 14:59:28,383 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 14:59:28,383 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = UPDATE prodotto SET nome='gatto', descrizione='animale', prezzo=150.0 where id=1
+]
+DEBUG[
+2016-03-17 14:59:28,383 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 14:59:28,383 i.u.p.ProdottoDaoJDBC [main]
+-> FindByPrimaryKey
+]
+DEBUG[
+2016-03-17 14:59:28,418 i.u.p.DBOperations [main]
+	> GettingDbConnection = org.postgresql.jdbc.PgConnection@6eda5c9
+]
+DEBUG[
+2016-03-17 14:59:28,418 i.u.p.ProdottoDaoJDBC [main]
+	> ConnectionOpened
+]
+DEBUG[
+2016-03-17 14:59:28,418 i.u.p.ProdottoDaoJDBC [main]
+	> DbOperation (Query = SELECT id,nome,descrizione,prezzo FROM prodotto WHERE id=1)
+]
+DEBUG[
+2016-03-17 14:59:28,425 i.u.p.ProdottoDaoJDBC [main]
+	> GotResult = 1 gatto animale 150.0
+]
+DEBUG[
+2016-03-17 14:59:28,426 i.u.p.ProdottoDaoJDBC [main]
+	> ClosingConnection = org.postgresql.jdbc.PgConnection@6eda5c9
+]
+DEBUG[
+2016-03-17 14:59:28,426 i.u.p.ProdottoDaoJDBC [main]
+	> Closed.
+]
+DEBUG[
+2016-03-17 14:59:28,426 i.u.p.ProdottoDaoJDBC [main]
+	> FlushingStatement = SELECT id,nome,descrizione,prezzo FROM prodotto WHERE id=1
+]
+DEBUG[
+2016-03-17 14:59:28,426 i.u.p.ProdottoDaoJDBC [main]
+	> Flushed.
+]
+DEBUG[
+2016-03-17 14:59:28,426 i.u.p.ProdottoDaoJDBC [main]
+	> CleaningResult = org.postgresql.jdbc.PgResultSet@333291e3
+]
+DEBUG[
+2016-03-17 14:59:28,426 i.u.p.ProdottoDaoJDBC [main]
+	> Cleaned.
+]
