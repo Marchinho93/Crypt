@@ -6,6 +6,8 @@ public class Prodotto {
 	private String descrizione;
 	private double prezzo;
 	
+	public Prodotto(){}
+	
 	public Prodotto(long id, String nome, String descrizione, double prezzo){
 		this.id = id;
 		this.nome = nome;
@@ -45,7 +47,16 @@ public class Prodotto {
 		return this.prezzo;
 	}
 	
+	public boolean equals(Object o){
+		Prodotto other = (Prodotto)o;
+		return this.id==other.id && this.nome==other.nome;
+	}
+	
+	public int hashCode(){
+		return (int) (this.id + this.nome.hashCode());
+	}
+	
 	public String toString(){
-		return this.id + " - " + this.nome + " - " + this.descrizione + " - " + this.prezzo;
+		return "[" +this.id + ", " + this.nome + ", " + this.descrizione + ", " + this.prezzo +"]";
 	}
 }
