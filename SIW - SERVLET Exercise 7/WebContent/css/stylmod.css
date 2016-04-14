@@ -1,0 +1,92 @@
+.progress {
+    height: 25px;
+}
+body{
+    padding-top:70px;
+}
+.progress-bar{
+    line-height:25px;
+}
+#status{
+    margin-top:80px;
+}
+#status h3{
+    margin-bottom:20px;
+}
+.doc {
+    padding: 5px 10px;
+}
+.phprofile{
+    width: 120px;
+    height: 130px;
+    margin-top: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.name_author{
+    text-align:center;
+    color:#333;
+}
+
+.sixty4{
+    width: 100px;
+    height:80px;
+}
+.sixty4:hover{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+
+}
+#lezioni a{
+    color:#fff;
+}
+#lezioni{
+    margin-top: 50px;
+    background-color: #333;
+    color: #fff;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.done{
+    background-color:#5cb85c;
+
+}
+.navbar-nav a:hover
+{
+    background-color: #E4E2E2 !important;
+}
+.ex1{
+
+}
+.form_container{
+    margin-top:50px;
+}
+.ex{
+    padding-top: 20px;
+    padding-bottom:50px;
+}
+
+#exform{
+    background-color: #FCF8E3;
+}
+#ex2{
+    background-color: #C76464;
+}
+#ex2 small{
+    color: #fff;
+}
+#ex3{
+    background-color: #d9edf7;
+}
+.mylist{
+    font-size:15px;
+    padding-left: inherit;
+}
+.my_subtitle{
+    margin-bottom: 10px;
+    font-size:19px;
+}
+
+.response {
+    margin-top:20px;
+    padding-left: inherit;
+}
