@@ -1,0 +1,3 @@
+DEBUG[ 2016-04-14 09:57:10,318 i.u.c.AesCrypt [main] > CreatingCrypterInstance ]
+ERROR[ 2016-04-14 09:57:10,319 i.u.c.AesCrypt [main] java.io.FileNotFoundException: C:\Users\Marco\git\Crypt\SIW - JDBC exercise 1\src\it\uniroma3\crypt\config.in (Impossibile trovare il percorso specificato) ]
+ERROR[ 2016-04-14 09:57:10,321 i.u.c.AesCrypt [main] java.lang.NullPointerException ]

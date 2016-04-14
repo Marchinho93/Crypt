@@ -23,7 +23,7 @@ public class AesCrypt {
 	private IvParameterSpec ivs;
 	private SecretKeySpec sk;
 	private Cipher aes;
-	private String path = "C:/Users/Marco/git/Crypt/SIW - JDBC exercise 1/src/it/uniroma3/crypt/config.in";
+	private String path = "src/it/uniroma3/crypt/config.in";
 	private String value1;
 	
 	final static Logger log = Logger.getLogger(AesCrypt.class);
